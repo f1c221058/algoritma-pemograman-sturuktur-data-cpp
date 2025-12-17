@@ -1,50 +1,22 @@
-// #include <iostream>
-//
-// using namespace std;
-//
-// int main(){
-//   char arah_angin;
-//   cout << "masukan arah mata angin";
-//   cin >> arah_angin;
-//
-//   switch (arah_angin) {
-//     case 'U':
-//       cout"Utara";
-//           break;
-//     case 'S':
-//       cout"Selatan"
-//
-//       break;
-//   }
-//   cout<<endl;
-//   cout <"dah"<<endl;
-// }
-//
 
-#include <iostream>
+#include<iostream>
 using namespace std;
 
+class Vektor {
+public:
+    Vektor(int s) : elem{new double[s]}, sz{s} { }  // Konstruktor untuk inisialisasi elemen
+    double& operator[](int i) { return elem[i]; }   // Akses elemen: subscripting
+    int size() { return sz; }
+
+    // Destructor untuk membersihkan memori
+    ~Vektor() { delete[] elem; }
+
+private:
+    double* elem;  // pointer untuk elemen-elemen vektor
+    int sz;        // ukuran vektor
+};
+
 int main() {
-    char arah_angin;
-    cout << "Masukkan arah mata angin: ";
-    cin >> arah_angin;
-
-    switch (arah_angin) {
-        case 'U':
-            cout << "Utara";
-            break;
-        case 'S':
-            cout << "Selatan";
-            break;
-        default:
-            cout << "Arah tidak dikenal";
-            break;
-    }
-
-    cout << endl;
-    cout << "Dah" << endl;
-
+    Vektor v(6);   // Membuat objek vektor dengan ukuran 6
     return 0;
 }
-
-

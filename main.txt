@@ -1,0 +1,10 @@
+nama  3232312
+Tempat Tinggal : 321312
+pekerjaan 3123
+nama  sadasd
+
+Tempat Tinggal : dasdas
+pekerjaan dasd
+nama  dasda
+Tempat Tinggal : dsadsa
+pekerjaan dsadsad

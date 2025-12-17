@@ -1,0 +1,14 @@
+prosedur maximum attend (s1,s2,...,1n) strat time to talks:
+e1,e2,e3: end times of talks:w1.w2,....,wn: number of attends to talks
+sort talks by the end anf reabel so that e1<=e2<=...<=end
+
+for j:=1 to n 
+  if no job i with i<j is compatible job j 
+    p(i)= 0
+  else p(j) :=max{i|i<j and job i is compatible with job i}
+  T(0):= 0
+
+for j:= 1 to n 
+  T(j):= max(wj + T(p(j)),T(j-1))
+
+return T(n){T(n) is the maximum number of attend}
