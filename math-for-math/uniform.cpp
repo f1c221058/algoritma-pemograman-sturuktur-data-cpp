@@ -1,4 +1,3 @@
-
 #include "uniform.h"
 #include <cstdlib>
 #include <ctime>
